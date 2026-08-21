@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PropertyCardCell" id="gTV-IL-0wX" customClass="PropertyCardCell" customModule="AIPoweredRealEstate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="236" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="card-pc">
+                        <rect key="frame" x="4" y="4" width="228" height="252"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="img-wrap">
+                                <rect key="frame" x="0.0" y="0.0" width="228" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="img-photo">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Buy · Villa " textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb-badge">
+                                        <rect key="frame" x="12" y="12" width="72" height="22"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="lb-badge-h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <color key="textColor" red="0.55294117647058827" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="circle-fav">
+                                        <rect key="frame" x="182" y="10" width="36" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="circle-fav-w"/>
+                                            <constraint firstAttribute="height" constant="36" id="circle-fav-h"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btn-fav">
+                                        <rect key="frame" x="182" y="10" width="36" height="36"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.89411764705882357" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="img-wrap-h"/>
+                                    <constraint firstItem="img-photo" firstAttribute="top" secondItem="img-wrap" secondAttribute="top" id="img-photo-t"/>
+                                    <constraint firstItem="img-photo" firstAttribute="leading" secondItem="img-wrap" secondAttribute="leading" id="img-photo-l"/>
+                                    <constraint firstItem="img-wrap" firstAttribute="trailing" secondItem="img-photo" secondAttribute="trailing" id="img-photo-r"/>
+                                    <constraint firstItem="img-wrap" firstAttribute="bottom" secondItem="img-photo" secondAttribute="bottom" id="img-photo-b"/>
+                                    <constraint firstItem="lb-badge" firstAttribute="leading" secondItem="img-wrap" secondAttribute="leading" constant="12" id="lb-badge-l"/>
+                                    <constraint firstItem="lb-badge" firstAttribute="top" secondItem="img-wrap" secondAttribute="top" constant="12" id="lb-badge-t"/>
+                                    <constraint firstItem="circle-fav" firstAttribute="top" secondItem="img-wrap" secondAttribute="top" constant="10" id="circle-fav-t"/>
+                                    <constraint firstItem="img-wrap" firstAttribute="trailing" secondItem="circle-fav" secondAttribute="trailing" constant="10" id="circle-fav-r"/>
+                                    <constraint firstItem="btn-fav" firstAttribute="top" secondItem="circle-fav" secondAttribute="top" id="btn-fav-t"/>
+                                    <constraint firstItem="btn-fav" firstAttribute="leading" secondItem="circle-fav" secondAttribute="leading" id="btn-fav-l"/>
+                                    <constraint firstItem="btn-fav" firstAttribute="trailing" secondItem="circle-fav" secondAttribute="trailing" id="btn-fav-r"/>
+                                    <constraint firstItem="btn-fav" firstAttribute="bottom" secondItem="circle-fav" secondAttribute="bottom" id="btn-fav-b"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oceanview Villa" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb-title">
+                                <rect key="frame" x="12" y="138" width="204" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.12941176470588237" green="0.14509803921568629" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Punta Cana" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb-loc">
+                                <rect key="frame" x="12" y="160" width="204" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.45882352941176469" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 bd  ·  3 ba  ·  320 m²" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb-specs">
+                                <rect key="frame" x="12" y="182" width="204" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.45882352941176469" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$485,000" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lb-price">
+                                <rect key="frame" x="12" y="203" width="204" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="img-wrap" firstAttribute="top" secondItem="card-pc" secondAttribute="top" id="img-wrap-t"/>
+                            <constraint firstItem="img-wrap" firstAttribute="leading" secondItem="card-pc" secondAttribute="leading" id="img-wrap-l"/>
+                            <constraint firstItem="card-pc" firstAttribute="trailing" secondItem="img-wrap" secondAttribute="trailing" id="img-wrap-r"/>
+                            <constraint firstItem="lb-title" firstAttribute="top" secondItem="img-wrap" secondAttribute="bottom" constant="10" id="lb-title-t"/>
+                            <constraint firstItem="lb-title" firstAttribute="leading" secondItem="card-pc" secondAttribute="leading" constant="12" id="lb-title-l"/>
+                            <constraint firstItem="card-pc" firstAttribute="trailing" secondItem="lb-title" secondAttribute="trailing" constant="12" id="lb-title-r"/>
+                            <constraint firstItem="lb-loc" firstAttribute="top" secondItem="lb-title" secondAttribute="bottom" constant="2" id="lb-loc-t"/>
+                            <constraint firstItem="lb-loc" firstAttribute="leading" secondItem="lb-title" secondAttribute="leading" id="lb-loc-l"/>
+                            <constraint firstItem="lb-loc" firstAttribute="trailing" secondItem="lb-title" secondAttribute="trailing" id="lb-loc-r"/>
+                            <constraint firstItem="lb-specs" firstAttribute="top" secondItem="lb-loc" secondAttribute="bottom" constant="6" id="lb-specs-t"/>
+                            <constraint firstItem="lb-specs" firstAttribute="leading" secondItem="lb-title" secondAttribute="leading" id="lb-specs-l"/>
+                            <constraint firstItem="lb-specs" firstAttribute="trailing" secondItem="lb-title" secondAttribute="trailing" id="lb-specs-r"/>
+                            <constraint firstItem="lb-price" firstAttribute="top" secondItem="lb-specs" secondAttribute="bottom" constant="6" id="lb-price-t"/>
+                            <constraint firstItem="lb-price" firstAttribute="leading" secondItem="lb-title" secondAttribute="leading" id="lb-price-l"/>
+                            <constraint firstItem="lb-price" firstAttribute="trailing" secondItem="lb-title" secondAttribute="trailing" id="lb-price-r"/>
+                            <constraint firstItem="card-pc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lb-price" secondAttribute="bottom" constant="12" id="lb-price-b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="card-pc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="card-pc-t"/>
+                <constraint firstItem="card-pc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="card-pc-l"/>
+                <constraint firstItem="gTV-IL-0wX" firstAttribute="trailing" secondItem="card-pc" secondAttribute="trailing" constant="4" id="card-pc-r"/>
+                <constraint firstItem="gTV-IL-0wX" firstAttribute="bottom" secondItem="card-pc" secondAttribute="bottom" constant="4" id="card-pc-b"/>
+            </constraints>
+            <size key="customSize" width="236" height="260"/>
+            <connections>
+                <outlet property="cardView" destination="card-pc" id="out-card"/>
+                <outlet property="favoriteButton" destination="btn-fav" id="out-fav-btn"/>
+                <outlet property="favoriteCircle" destination="circle-fav" id="out-fav-circle"/>
+                <outlet property="imageContainer" destination="img-wrap" id="out-img-wrap"/>
+                <outlet property="locationLabel" destination="lb-loc" id="out-loc"/>
+                <outlet property="photoImageView" destination="img-photo" id="out-photo"/>
+                <outlet property="priceLabel" destination="lb-price" id="out-price"/>
+                <outlet property="specsLabel" destination="lb-specs" id="out-specs"/>
+                <outlet property="titleLabel" destination="lb-title" id="out-title"/>
+                <outlet property="typeBadge" destination="lb-badge" id="out-badge"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="120"/>
+        </collectionViewCell>
+    </objects>
+</document>

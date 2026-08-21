@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UIScrollView.appearance().bounces = false
+        UIScrollView.appearance().alwaysBounceVertical = false
+        UIScrollView.appearance().alwaysBounceHorizontal = false
+        GMSServices.provideAPIKey(Constant.googleMapsAPIKey)
         return true
     }
 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		706F4051303581200015D051 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 706F4050303581200015D051 /* GoogleMaps */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		703BBA65303428E6003CF718 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -30,7 +34,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		703BBA76303428E6003CF718 /* Exceptions for "AIPoweredRealEstate" folder in "AIPoweredRealEstate" target */ = {
+		703BBAE430343B17003CF718 /* Exceptions for "AIPoweredRealEstate" folder in "AIPoweredRealEstate" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -40,14 +44,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		703BBA50303428E4003CF718 /* AIPoweredRealEstate */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				703BBA76303428E6003CF718 /* Exceptions for "AIPoweredRealEstate" folder in "AIPoweredRealEstate" target */,
-			);
-			path = AIPoweredRealEstate;
-			sourceTree = "<group>";
-		};
 		703BBA67303428E6003CF718 /* AIPoweredRealEstateTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AIPoweredRealEstateTests;
@@ -58,6 +54,14 @@
 			path = AIPoweredRealEstateUITests;
 			sourceTree = "<group>";
 		};
+		703BBABB30342A12003CF718 /* AIPoweredRealEstate */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				703BBAE430343B17003CF718 /* Exceptions for "AIPoweredRealEstate" folder in "AIPoweredRealEstate" target */,
+			);
+			path = AIPoweredRealEstate;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706F4051303581200015D051 /* GoogleMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +93,7 @@
 		703BBA45303428E4003CF718 = {
 			isa = PBXGroup;
 			children = (
-				703BBA50303428E4003CF718 /* AIPoweredRealEstate */,
+				703BBABB30342A12003CF718 /* AIPoweredRealEstate */,
 				703BBA67303428E6003CF718 /* AIPoweredRealEstateTests */,
 				703BBA71303428E6003CF718 /* AIPoweredRealEstateUITests */,
 				703BBA4F303428E4003CF718 /* Products */,
@@ -121,10 +126,11 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				703BBA50303428E4003CF718 /* AIPoweredRealEstate */,
+				703BBABB30342A12003CF718 /* AIPoweredRealEstate */,
 			);
 			name = AIPoweredRealEstate;
 			packageProductDependencies = (
+				706F4050303581200015D051 /* GoogleMaps */,
 			);
 			productName = AIPoweredRealEstate;
 			productReference = 703BBA4E303428E4003CF718 /* AIPoweredRealEstate.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 703BBA45303428E4003CF718;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				706F404F303581200015D051 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 703BBA4F303428E4003CF718 /* Products */;
 			projectDirPath = "";
@@ -290,7 +299,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F65D9CD6HQ;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AIPoweredRealEstate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -318,7 +328,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F65D9CD6HQ;
-				GENERATE_INFOPLIST_FILE = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = AIPoweredRealEstate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -569,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		706F404F303581200015D051 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		706F4050303581200015D051 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 706F404F303581200015D051 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 703BBA46303428E4003CF718 /* Project object */;
 }
