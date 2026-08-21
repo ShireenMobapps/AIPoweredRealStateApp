@@ -51,6 +51,7 @@ class ServiceHandler{
         guard let response = response as? HTTPURLResponse else{return nil}
         
         let stscode = response.statusCode
+        
         if stscode == 200 || stscode == 201{
             
             let newRes = try JSONDecoder().decode(T.self, from: data)
@@ -59,6 +60,7 @@ class ServiceHandler{
             
         }
         throw URLError(.badServerResponse)
+        
     }
     
     class func getMutableBody(param:[String:Any],boundary:String) -> Data{
