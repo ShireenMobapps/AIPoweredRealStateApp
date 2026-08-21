@@ -55,6 +55,19 @@ class KeyChainManager{
         
     }
     
+    func deleteValue(key:String)->Bool{
+        
+        let query:[String:Any] = [
+            kSecClass as String:kSecClassGenericPassword,
+            kSecAttrAccount as String:key
+        ]
+        
+        let sts = SecItemDelete(query as CFDictionary)
+        
+        return sts == errSecSuccess
+        
+    }
+    
 }
 
 
